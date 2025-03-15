@@ -1,17 +1,15 @@
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config(); // Load API key from .env file
+require('dotenv').config(); 
 const cors=require('cors');
 const app = express();
 app.use(express.json());
 const cors = require("cors");
-
 app.use(cors({
-    origin: "*", // Allow all origins (not recommended for production)
-    methods: ["GET", "POST"], // Allow required methods
+    origin: "*",
+    methods: ["GET", "POST"], 
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
-
 app.post('/message', async (req, res) => {
   const { message } = req.body;
 
@@ -20,7 +18,7 @@ app.post('/message', async (req, res) => {
   }
 
   try {
-    const apiKey = process.env.GEMINI_API_KEY; // Get API key from .env
+    const apiKey = process.env.GEMINI_API_KEY;
     const response = await axios.post(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${apiKey}`,
       {
