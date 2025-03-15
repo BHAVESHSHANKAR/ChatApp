@@ -1,9 +1,16 @@
 const express = require('express');
 const axios = require('axios');
 require('dotenv').config(); // Load API key from .env file
-
+const cors=require('cors');
 const app = express();
 app.use(express.json());
+const cors = require("cors");
+
+app.use(cors({
+    origin: "*", // Allow all origins (not recommended for production)
+    methods: ["GET", "POST"], // Allow required methods
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.post('/message', async (req, res) => {
   const { message } = req.body;
