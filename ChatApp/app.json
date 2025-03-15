@@ -30,6 +30,12 @@
         "projectId": "eb07feb3-9977-4e14-8c24-aea4cb8307f9"
       }
     },
-    "owner": "bhaveshshankar"
+    "owner": "bhaveshshankar",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/eb07feb3-9977-4e14-8c24-aea4cb8307f9"
+    }
   }
 }
