@@ -5,11 +5,12 @@ const cors=require('cors');
 const app = express();
 app.use(express.json());
 const cors = require("cors");
-app.use(cors({
-    origin: "*",
-    methods: ["GET", "POST"], 
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+// app.use(cors({
+//     origin: "*",
+//     methods: ["GET", "POST"], 
+//     allowedHeaders: ["Content-Type", "Authorization"]
+// }));
+app.use(cors())
 app.post('/message', async (req, res) => {
   const { message } = req.body;
 
