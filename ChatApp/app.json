@@ -19,10 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.bhaveshshankar.ChatApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "eb07feb3-9977-4e14-8c24-aea4cb8307f9"
+      }
+    },
+    "owner": "bhaveshshankar"
   }
 }

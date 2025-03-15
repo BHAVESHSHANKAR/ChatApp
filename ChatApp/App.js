@@ -9,7 +9,8 @@ export default function App() {
   const scrollViewRef = useRef();
 
   // Use your machine's local IP address instead of localhost
-  const SERVER_URL = 'http://192.168.50.173:5000/message'; // Change this to your actual local IP
+  const SERVER_URL = 'https://chat-app-api-eight.vercel.app/message';
+ // Change this to your actual local IP
 
   const sendMessage = async () => {
     if (!message.trim()) return; // Prevent sending empty messages
